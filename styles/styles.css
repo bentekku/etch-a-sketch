@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Laila:wght@400;600&family=Nabla&display=swap');
+
+:root{
+    --bg-primary: #161a1e;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--bg-primary);
+}
+
+header{
+    margin-top: 24px;
+
+    /* border: 2px solid salmon; */
+}
+
+header h1 {
+    font-family: 'Nabla', cursive;
+    color: #262626;
+    font-size: 4rem;
+}
+
+.container {
+    width: 600px;
+    height: 600px;
+    background-color: aliceblue;
+
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,1);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,1);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,1);
+}
+
+#text-user-input {
+    height:38px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+
+    /* border: 2px solid salmon; */
+}
+
+footer p:last-child {
+    font-size: 12px;
+    /* border: 2px dashed slateblue; */
+}
+
+footer, footer a {
+    color: aliceblue;
+}
+
+footer a {
+    font-weight: 600;
+}
