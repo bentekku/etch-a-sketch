@@ -11,20 +11,38 @@
   <body>
     <header><h1>Etch a Sketch</h1></header>
     <div class="container">
-      <form>
-        <input
-          id="text-user-input"
-          type="text"
-          placeholder="Enter a number between 2 and 99"
-        />
-      </form>
+      <div class="settings">
+        <form>
+          <p>Draw board grid scaling:</p>
+          <p id="dis-user-input">0 * 0</p>
+          <input
+            id="slider-user-input"
+            type="range"
+            min="2"
+            max="16"
+            value="8"
+          />
+        </form>
+        <button id="btn-black">Black</button>
+        <button>Rainbow</button>
+        <button>Reset</button>
+      </div>
+      <div class="draw-board"></div>
     </div>
     <footer>
       <p>
         Created By:
         <a href="https://github.com/mikeykuin" target="_blank">Shadab Khan</a>
       </p>
-      <p>[ The Odin Project's Assignment ]</p>
+      <p>
+        [ The Odin Project's
+        <a
+          href="https://www.theodinproject.com/lessons/foundations-etch-a-sketch"
+          target="_blank"
+          >Assignment</a
+        >
+        ]
+      </p>
     </footer>
   </body>
 </html>
