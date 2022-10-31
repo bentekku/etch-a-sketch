@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Laila:wght@400;600&family=Nabla&display=swap');
 
 :root{
-    --bg-primary: #161a1e;
+    /* background colors variants */
+    --bg-dark: #161a1e;
+    --bg-light: #F9F9F9;
+
     --input-text-color: #545454;
 }
 
@@ -25,12 +28,18 @@ body{
     /* overiding all the fontstyling in the webpage */
     font-family: 'Laila', sans-serif;
 
-
-    background-color: var(--bg-primary);
+    background-color: var(--bg-dark);
 }
 
 header{
     margin-top: 24px;
+
+    display: flex;
+    justify-content: center;
+
+    gap: 2rem;
+
+    width: 100%;
 
     /* border: 2px solid salmon; */
 }
@@ -60,6 +69,27 @@ header h1 {
 
     border: .15rem solid salmon;
     border-radius: 18px;
+}
+
+.icons {
+    margin-left: 235px;
+    margin-top: -64px;
+    margin-bottom: 12px;
+
+    width: auto;
+
+    scale: .7;
+
+    color: var(--bg-light);
+    fill: var(--bg-light);
+
+    cursor: pointer;
+}
+
+.icons:hover {
+   scale: .8;
+
+   /* background-color: var(--bg-light); */
 }
 
 .settings :first-child {
@@ -132,6 +162,8 @@ button:hover {
 }
 
 .draw-board {
+    display: grid;
+
     width: 600px;
     height: 600px;
     /* background-color: aliceblue; */
@@ -140,19 +172,9 @@ button:hover {
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,1);
     -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,1);
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,1);
-
-    display: flex;
 }
 
 .pixel-div {
-    width: 100%;
-    height: 100%;
-    /* width: 50px; */
-    /* height: 50px; */
-    /* display: flex; */
-
-    flex: 1;
-    flex-flow: row wrap;
     border: 1px solid salmon;
 }
 
