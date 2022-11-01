@@ -1,11 +1,16 @@
 const DRAWBOARD = document.querySelector(".draw-board");
 const USERINPUT = document.querySelector("#slider-user-input");
 const DISPLAYPARA = document.querySelector("#dis-user-input");
+const BLACK_COLOR = document.querySelector("#btn-color-black");
+const RANDOM_COLOR = document.querySelector("#btn-color-random");
+const ERASE_COLOR = document.querySelector("#btn-color-erase");
+const CLEAR_GRID = document.querySelector("#btn-reset");
 
 // just for debugging purpose
 let totalDivs = 0;
 
 let userVal = "";
+let colorSelected = "black";
 
 processUserVal();
 
@@ -50,10 +55,53 @@ function generateGrid(num) {
     let pixelDiv = document.createElement("div");
     pixelDiv.classList.add("pixel-div");
 
+    pixelDiv.addEventListener("mouseover", paint);
+
     // just for debugging
     // pixelDiv.style.cssText =
     // ("border-radius: 12px; border: 1px solid salmon; background-color: green;");
 
     DRAWBOARD.insertAdjacentElement("beforeend", pixelDiv);
   }
+
+  function generateRandomColor() {
+    let color = "#";
+    color += Math.floor(Math.random() * 16777215).toString(16);
+    return color;
+  }
+
+  function paint() {
+    if (colorSelected === "black") {
+      this.style.cssText = "background-color: black;";
+    } else if (colorSelected === "random") {
+      // don't need to store the value of random color generated in a variable
+      // instead it can be called and display in the back-ticks method, which surprisingly can be used to call functions too, Amazing!
+      this.style.cssText = `background-color: ${generateRandomColor()}`;
+    } else if (colorSelected === "eraser") {
+      // this.style.cssText = "background-color: none";
+      this.style.cssText = "background-color: var(--bg-light)";
+    }
+  }
+
+  function resetGrid() {
+    const PIXEL_DIVS = document.querySelectorAll(".pixel-div");
+    PIXEL_DIVS.forEach((pixelDiv) => {
+      pixelDiv.style.cssText = "background-color: var(--bg-light)";
+    });
+    console.log("You click on: Clear Button");
+  }
+
+  BLACK_COLOR.addEventListener("click", () => {
+    colorSelected = "black";
+  });
+
+  RANDOM_COLOR.addEventListener("click", () => {
+    colorSelected = "random";
+  });
+
+  ERASE_COLOR.addEventListener("click", () => {
+    colorSelected = "eraser";
+  });
+
+  CLEAR_GRID.addEventListener("click", resetGrid);
 }
