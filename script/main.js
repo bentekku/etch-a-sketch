@@ -35,8 +35,8 @@ function processUserVal() {
   generateGrid(userVal);
 
   // just for debugging purpose
-  console.log(`user value: ${userVal}`);
-  console.log(`total divs to be displayed: ${totalDivs}`);
+  // console.log(`user value: ${userVal}`);
+  // console.log(`total divs to be displayed: ${totalDivs}`);
 }
 
 function clearGrid() {
@@ -88,7 +88,7 @@ function generateGrid(num) {
     PIXEL_DIVS.forEach((pixelDiv) => {
       pixelDiv.style.cssText = "background-color: var(--bg-light)";
     });
-    console.log("You click on: Clear Button");
+    // console.log("You click on: Clear Button");
   }
 
   BLACK_COLOR.addEventListener("click", () => {
