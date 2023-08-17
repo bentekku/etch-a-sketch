@@ -2,6 +2,8 @@
 
 Welcome to the Etch-A-Sketch project! This repository contains a fun implementation of the classic drawing toy "Etch-A-Sketch" using HTML, CSS, and JavaScript. With this web application, you can create drawings by moving your cursor on the sketchpad. It is one of many assignment projects of [The Odin Project](https://www.theodingproject.com).
 
+![App Screenshot](screenshot.png)
+
 ## Demo
 
 Check out the live demo of the project [here](https://bentekku.github.io/etch-a-sketch/) to see it in action.
